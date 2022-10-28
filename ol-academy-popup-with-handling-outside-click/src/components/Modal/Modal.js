@@ -7,14 +7,18 @@ const Backdrop = (props) => {
 }
 
 const Modal = (props) => {
+	const onCloseButtonClick = (e) => {
+		e.stopPropagation();
+		props.onModalClose()
+	}
 	return (
 		<Backdrop onModalClose={props.onModalClose}>
-			<div className={styles.modalBox}>
-				<div className={styles.modalHeader}>bojack horseman</div>
+			<div onClick={(e) => e.stopPropagation()} className={styles.modalBox}>
+				<div className={styles.modalHeader}>სალამი დანიელ :დ</div>
 				<div>{props.modalText}</div>
 				<div className={styles.modalContent}>
 					<button
-						onClick={props.onModalClose}
+						onClick={onCloseButtonClick}
 						className={styles.modalButton}>close
 					</button>
 				</div>
