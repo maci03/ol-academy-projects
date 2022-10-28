@@ -3,12 +3,16 @@ import { useState } from 'react';
 import Modal from './components/Modal/Modal';
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleToggleModal = () => {
+    setIsModalOpen((oldState => !oldState))
+  };
 
   return (
     <div className="App">
-      {!isModalOpen && <button>click me</button>}
-      {isModalOpen && <Modal />}
+      {!isModalOpen && <button onClick={handleToggleModal}>click me</button>}
+      {isModalOpen && <Modal modalText={"welcome"} onModalClose={handleToggleModal} />}
     </div>
   );
 }

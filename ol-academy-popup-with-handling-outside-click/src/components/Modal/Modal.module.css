@@ -14,7 +14,6 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-
 .backdrop {
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
@@ -27,3 +26,6 @@
     justify-content: center;
 }
 
+.modalButton {
+    cursor: pointer;
+}

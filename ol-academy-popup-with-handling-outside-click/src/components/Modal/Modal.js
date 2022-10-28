@@ -10,10 +10,13 @@ const Modal = (props) => {
 	return (
 		<Backdrop>
 			<div className={styles.modalBox}>
-				<div>bojack horseman</div>
+				<div className={styles.modalHeader}>bojack horseman</div>
 				<div>{props.modalText}</div>
-				<div>
-					<button onClick={props.onModalClose}>close</button>
+				<div className={styles.modalContent}>
+					<button
+						onClick={props.onModalClose}
+						className={styles.modalButton}>close
+					</button>
 				</div>
 			</div>
 		</Backdrop>
