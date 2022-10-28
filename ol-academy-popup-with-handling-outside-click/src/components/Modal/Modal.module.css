@@ -1,0 +1,29 @@
+.modalBox{
+    /* border: 1px solid slateblue; */
+    width: 300px;
+    min-height: 150px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: slateblue;
+    color: whitesmoke;
+    animation: slide-down 300ms ease-out forwards;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

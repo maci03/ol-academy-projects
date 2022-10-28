@@ -1,14 +1,15 @@
+import styles from './Modal.module.css';
 
 const Backdrop = (props) => {
 	return (
-		<div>{props.children}</div>
+		<div className={styles.backdrop}>{props.children}</div>
 	)
 }
 
 const Modal = (props) => {
 	return (
 		<Backdrop>
-			<div>
+			<div className={styles.modalBox}>
 				<div>bojack horseman</div>
 				<div>{props.modalText}</div>
 				<div>
