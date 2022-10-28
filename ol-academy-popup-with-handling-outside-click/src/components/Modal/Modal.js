@@ -2,13 +2,13 @@ import styles from './Modal.module.css';
 
 const Backdrop = (props) => {
 	return (
-		<div className={styles.backdrop}>{props.children}</div>
+		<div className={styles.backdrop} onClick={props.onModalClose}>{props.children}</div>
 	)
 }
 
 const Modal = (props) => {
 	return (
-		<Backdrop>
+		<Backdrop onModalClose={props.onModalClose}>
 			<div className={styles.modalBox}>
 				<div className={styles.modalHeader}>bojack horseman</div>
 				<div>{props.modalText}</div>
