@@ -35,10 +35,18 @@ function App() {
   };
 
   useEffect(() => {
+    const windowContextMenuHide = (e) => {
+      e.preventDefault();
+      handleContextMenuHide();
+    }
     const hideContextMenuFromOutside = () => handleContextMenuHide();
     window.addEventListener('click', hideContextMenuFromOutside);
+    window.addEventListener('contextmenu', windowContextMenuHide);
 
-    return () => window.removeEventListener('click', hideContextMenuFromOutside)
+    return () => {
+      window.removeEventListener('click', hideContextMenuFromOutside);
+      window.removeEventListener('contextmenu', windowContextMenuHide)
+    }
   }, [])
 
   return (
@@ -52,7 +60,7 @@ function App() {
           background={contextMenuData.color}
         />
       )}
-      <ul>
+      <ul onContextMenu={(e) => e.stopPropagation()}>
         {STATIC_DATA.map(item => (
           <ListItem onContextMenu={(e) => onMouseRightClick(e, item)} key={item.id} background={item.color} text={item.title} />
         ))}
