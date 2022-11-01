@@ -1,5 +1,7 @@
 import './App.css';
 import ListItem from './Components/ListItem/ListItem';
+import ContextMenu from './Components/ContextMenu/ContextMenu';
+import { useEffect, useState } from 'react';
 
 const STATIC_DATA = [
   { title: "Leqso", color: "green", id: 1 },
@@ -14,12 +16,46 @@ const STATIC_DATA = [
   { title: "vano gejadze", color: "silver", id: 10 },
 ];
 
-
 function App() {
+  const [xy, setXy] = useState({ x: 0, y: 0 });
+  const [showContextMenu, setShowContextMenu] = useState(false);
+  const [contextMenuData, setContextMenuData] = useState({});
+
+  const onMouseRightClick = (e, liData) => {
+    e.preventDefault();
+    setShowContextMenu(true);
+    setContextMenuData(liData);
+    setXy({ x: e.pageX, y: e.pageY });
+  };
+
+  const handleContextMenuHide = () => {
+    setShowContextMenu(false);
+    setXy({ x: 0, y: 0 });
+    setContextMenuData({});
+  };
+
+  useEffect(() => {
+    const hideContextMenuFromOutside = () => handleContextMenuHide();
+    window.addEventListener('click', hideContextMenuFromOutside);
+
+    return () => window.removeEventListener('click', hideContextMenuFromOutside)
+  }, [])
+
   return (
     <div className="App">
+      {showContextMenu && (
+        <ContextMenu
+          onContextMenuHide={handleContextMenuHide}
+          x={xy.x}
+          y={xy.y}
+          content={contextMenuData.title}
+          background={contextMenuData.color}
+        />
+      )}
       <ul>
-        {STATIC_DATA.map(item => <ListItem key={item.id} background={item.color} text={item.title} />)}
+        {STATIC_DATA.map(item => (
+          <ListItem onContextMenu={(e) => onMouseRightClick(e, item)} key={item.id} background={item.color} text={item.title} />
+        ))}
       </ul>
     </div>
   );

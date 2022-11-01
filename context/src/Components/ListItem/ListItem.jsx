@@ -1,6 +1,6 @@
 const ListItem = (props) => {
     return (
-        <li onClick={() => console.log('j')} style={{ background: props.background }}>{props.text}</li>
+        <li onContextMenu={props.onContextMenu} onClick={() => console.log('j')} style={{ background: props.background }}>{props.text}</li>
     )
 }
 
