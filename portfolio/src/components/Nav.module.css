@@ -1,0 +1,13 @@
+.nav {
+    font-size: 22px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .navlinks,
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
