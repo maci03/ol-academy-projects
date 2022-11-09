@@ -7,69 +7,8 @@ const About = () => {
       <div>
         <h1>Hello my name is Maci Abesadze</h1>
         <br />
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
-          consequatur, tempore quidem odit veniam recusandae laboriosam quaerat
-          deserunt aut accusantium beatae officia? Architecto magni vero quasi
-          quis rerum nesciunt?
-        </p>
+       <h3>My goal is to become a web developer, you can view my work on this page,
+         happy coding, may the force be with you</h3> 
       </div>
     </div>
   );
