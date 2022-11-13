@@ -1,0 +1,12 @@
+.contactPage,
+.about,
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.about h1 {
+  color: rgb(207, 173, 61);
+}
