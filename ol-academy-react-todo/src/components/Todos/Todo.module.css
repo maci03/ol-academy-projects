@@ -1,0 +1,88 @@
+.list-item {
+    width: 100%;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    /* border: 1px solid rgb(207, 191, 191); */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(218, 196, 199);
+    transition: 200ms ease-in;
+    min-height: 133px;
+    font-size: 18px;
+  }
+  
+  .list-item.completed {
+    background-color: rgb(111, 202, 111);
+  }
+  
+  .todoText {
+    width: 60%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    color: rgb(26, 23, 23);
+    line-height: 21px;
+  }
+  
+  .form {
+    width: 60%;
+  }
+  
+  .form small {
+    color: red;
+  }
+  
+  .update-section {
+    margin-top: 10px;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  .controls button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  .update-btn {
+    background-color: green;
+    color: lightgoldenrodyellow;
+  }
+  
+  .icons-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .arrowicons-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-left: 15px;
+  }
+  
+  .input {
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    border: 1px solid rgb(209, 192, 192);
+    border-radius: 6px;
+    font-size: 22px;
+  }
