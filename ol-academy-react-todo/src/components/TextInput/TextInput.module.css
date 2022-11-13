@@ -1,0 +1,43 @@
+.input-box {
+    padding: 10px;
+  }
+  
+  .input {
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    border: 1px solid rgb(209, 192, 192);
+    border-radius: 6px;
+    font-size: 22px;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .input.redInputBorder {
+    border: 1px solid red;
+  }
+  
+  .controls {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .cancelTdBtn,
+  .addTodoBtn {
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .addTodoBtn {
+    background-color: rgb(111, 202, 111);
+    color: #fff;
+  }
