@@ -7,6 +7,6 @@ const homeStyles = {
   minHeight: "80vh",
 };
 
-const Home = () => <h1 style={homeStyles}>Hello guys</h1>;
+const Home = () => <h1 style={homeStyles}>Hello guys, Welcome to my portfolio</h1>;
 
 export default Home;

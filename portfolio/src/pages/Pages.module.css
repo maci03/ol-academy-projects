@@ -4,9 +4,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 93vh;
 }
 
 .about h1 {
-  color: rgb(207, 173, 61);
+  color: rgb(209, 131, 52);
+}
+.about{
+  background-color: silver;
+}
+.projects{
+  background-color:indigo;
+  color: aliceblue;
+}
+.contactPage{
+  background-color: rgb(220, 145, 8);
+  color:red;
+}
+.contactPage:hover{
+  color: aliceblue;
+}
+.home{
+  ;
 }

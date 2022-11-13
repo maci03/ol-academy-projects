@@ -20,9 +20,12 @@ code {
 }
 a{
   text-decoration: none;
-  color: black;
+  color: snow;
   
 }
 a:hover{
   color: rgb(253, 72, 72);
+}
+.App{
+  background-color: rgb(7, 24, 215);
 }
