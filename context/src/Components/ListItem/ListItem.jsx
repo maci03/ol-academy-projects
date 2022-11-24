@@ -1,7 +1,12 @@
-const ListItem = (props) => {
+const ListItem = ({ background, text, onContextMenu }) => {
     return (
-        <li onContextMenu={props.onContextMenu} onClick={() => console.log('j')} style={{ background: props.background }}>{props.text}</li>
-    )
-}
+        <li
+            onContextMenu={onContextMenu}
+            onClick={() => console.log('j')}
+            style={{ background }}>
+            {text}
+        </li>
+    );
+};
 
 export default ListItem;

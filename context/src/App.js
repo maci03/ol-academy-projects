@@ -17,20 +17,22 @@ const STATIC_DATA = [
 ];
 
 function App() {
-  const [xy, setXy] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [showContextMenu, setShowContextMenu] = useState(false);
   const [contextMenuData, setContextMenuData] = useState({});
 
   const onMouseRightClick = (e, liData) => {
+    console.log('e', e)
     e.preventDefault();
     setShowContextMenu(true);
     setContextMenuData(liData);
-    setXy({ x: e.pageX, y: e.pageY });
+    setPosition({ x: e.pageX, y: e.pageY });
   };
 
+  // hide menu
   const handleContextMenuHide = () => {
     setShowContextMenu(false);
-    setXy({ x: 0, y: 0 });
+    setPosition({ x: 0, y: 0 });
     setContextMenuData({});
   };
 
@@ -39,12 +41,11 @@ function App() {
       e.preventDefault();
       handleContextMenuHide();
     }
-    const hideContextMenuFromOutside = () => handleContextMenuHide();
-    window.addEventListener('click', hideContextMenuFromOutside);
+    window.addEventListener('click', () => handleContextMenuHide());
     window.addEventListener('contextmenu', windowContextMenuHide);
 
     return () => {
-      window.removeEventListener('click', hideContextMenuFromOutside);
+      window.removeEventListener('click', () => handleContextMenuHide());
       window.removeEventListener('contextmenu', windowContextMenuHide)
     }
   }, [])
@@ -54,8 +55,8 @@ function App() {
       {showContextMenu && (
         <ContextMenu
           onContextMenuHide={handleContextMenuHide}
-          x={xy.x}
-          y={xy.y}
+          positionX={position.x}
+          positionY={position.y}
           content={contextMenuData.title}
           background={contextMenuData.color}
         />
